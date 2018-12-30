@@ -6,11 +6,11 @@ This repository contains the code for the parent side react-native application p
 
 ## Dependencies
 
-..* react-navigation - (https://github.com/react-navigation/react-navigation)
-..* react-native-paper - (https://github.com/callstack/react-native-paper)
-..* react-native-audio - (https://github.com/jsierles/react-native-audio)
-..* react-native-sound - (https://github.com/zmxv/react-native-sound)
-..* react-native-fetch-blob - (https://github.com/wkh237/react-native-fetch-blob), This version is no longer maintainer, but a maintained fork "rn-fetch-blob" could also be used (https://github.com/joltup/rn-fetch-blob)
+* react-navigation - (https://github.com/react-navigation/react-navigation)
+* react-native-paper - (https://github.com/callstack/react-native-paper)
+* react-native-audio - (https://github.com/jsierles/react-native-audio)
+* react-native-sound - (https://github.com/zmxv/react-native-sound)
+* react-native-fetch-blob - (https://github.com/wkh237/react-native-fetch-blob), This version is no longer maintainer, but a maintained fork "rn-fetch-blob" could also be used (https://github.com/joltup/rn-fetch-blob)
 
 ## Screenshots of the application
 
