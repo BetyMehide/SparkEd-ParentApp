@@ -18,3 +18,9 @@ This repository contains the code for the parent side react-native application p
 <img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/PersonalizeScreen.png height="520" alt="Personalization menu screen"> <img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/CharactersScreen.png height="520" alt="Character personalization screen"> 
 <img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/InputScreen.png height="520" alt="Input item personalization screen"> <img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/ScriptScreen.png height="520" alt="Script personalization screen"> 
 <img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/PublishStoryScreen.png height="520" alt="Save and publish story screen"> 
+
+
+
+
+
+Icons in the assets folder taken from flaticon.com.
