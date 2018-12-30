@@ -14,19 +14,11 @@ This repository contains the code for the parent side react-native application p
 
 ## Screenshots of the application
 
-![alt text][HomeScreen]
-![alt text][NewStoriesScreen]
-![alt text][PersonalizeScreen]
-![alt text][CharactersScreen]
-![alt text][InputScreen]
-![alt text][ScriptScreen]
-![alt text][PublishStoryScreen]
+<img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/HomeScreen.png height="100"> "Home screen"
+<img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/NewStoriesScreen.png height="100"> "Add new stories screen"
 
-
-[HomeScreen]: https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/HomeScreen.png "Home screen"
-[NewStoriesScreen]: https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/NewStoriesScreen.png "Add new stories screen"
-[PersonalizeScreen]: https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/PersonalizeScreen.png "Personalization menu screen" 
-[CharactersScreen]: https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/CharactersScreen.png "Character personalization screen"
-[InputScreen]: https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/InputScreen.png "Input item personalization screen"
-[ScriptScreen]: https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/ScriptScreen.png "Script personalization screen"
-[PublishStoryScreen]: https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/PublishStoryScreen.png "Save and publish story screen"
+<img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/PersonalizeScreen.png height="100"> "Personalization menu screen"
+<img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/CharactersScreen.png height="100"> "Character personalization screen"
+<img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/InputScreen.png height="100"> "Input item personalization screen"
+<img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/ScriptScreen.png height="100"> "Script personalization screen"
+<img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/PublishStoryScreen.png height="100"> "Save and publish story screen"
