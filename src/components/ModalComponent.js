@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Button,
-  StyleSheet,
-  Text,
-  TouchableNativeFeedback,
-  View
-} from 'react-native';
-import Modal from 'react-native-modal'
-import HeaderButton from '../components/HeaderButton';
+import {StyleSheet, Text, TouchableNativeFeedback, View} from 'react-native';
+import Modal from 'react-native-modal';
 
 export default class ModalComponent extends Component {
 
