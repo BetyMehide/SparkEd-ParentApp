@@ -4,7 +4,7 @@ import {Headline, Paragraph, Card} from 'react-native-paper'
 import HeaderComponent from '../components/HeaderComponent';
 import { DbChildResponsesGet } from '../api/api';
 
-
+//TODO: integrate
 export default class HomeScreen extends Component {
 
   state = { 

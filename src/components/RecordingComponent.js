@@ -9,6 +9,7 @@ export default class RecordingComponent extends Component{
 
     constructor(props){
         super(props);
+        this.changeScene = this.changeScene.bind(this);
         this.state={
             currentTime: 0.0,
             recording: false,
@@ -19,6 +20,11 @@ export default class RecordingComponent extends Component{
             audioPath: AudioUtils.DocumentDirectoryPath + '/test00' + this.props.instance + '0.aac',
             hasPermission: true,
         }
+    }
+
+    changeScene(recordingExists, recordingTime, newScene, instance){
+      this.setState({finished: recordingExists, stoppedRecording:true, currentTime: recordingTime, canPlay: recordingExists, audioPath: AudioUtils.DocumentDirectoryPath + '/test00' + instance + newScene +'.aac'}, 
+        () => {console.log(this.state)});
     }
 
     //prepare recording path

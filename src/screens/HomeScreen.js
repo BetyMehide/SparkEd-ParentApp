@@ -15,10 +15,8 @@ export default class HomeScreen extends Component {
   //function to render each story in the user's sotry list onto the screen. 
   _renderStories = (navigate) => {
     return this.state.myStories.map((data) => {
-      let switchValue = data.responded ? data.responded : data.published;
       return(
         <Card style={{marginBottom:10}} key={data.instance}>
-          {console.log(data.instance)}
           <Card.Cover source={require('../../assets/strayDog.png')}/>
           <Card.Content>
             <Title style={{margin:10}}>{data.storyName}</Title>
@@ -36,7 +34,7 @@ export default class HomeScreen extends Component {
             </View>
             <View style={{justifyContent:'flex-end', width:80, marginHorizontal: 10}}>
               <Paragraph>Published</Paragraph>
-              <Switch value={switchValue} onValueChange={() => {this._changeState(data.instance)}}/>    
+              <Switch value={data.published} onValueChange={() => {this._changeState(data.instance)}}/>    
             </View>
           </Card.Actions>
         </Card>
@@ -70,15 +68,23 @@ export default class HomeScreen extends Component {
 
   //get user story list when loading screen
   componentWillMount(){
-    this.DbQueryGet();
-    this.setState({reRender: false});
+    this.willFocusSubscription = this.props.navigation.addListener(
+      'willFocus',
+      () => {
+        this.setState({reRender: false});
+      }
+    );
+  }
+
+  componentWillUnmount() {
+    this.willFocusSubscription.remove();
   }
 
   //get user story list when updating screen (to handle cache)
   componentWillUpdate(){
     if(this.state.reRender){
-      this.DbQueryGet();
       this.setState({reRender: false});
+      this.DbQueryGet();
     }
   }
 
@@ -106,8 +112,8 @@ export default class HomeScreen extends Component {
           style={styles.fab}
           color='#000'
           icon={require('../../assets/add.png')}
-          onPress={()=>{this.setState({reRender: true});
-                        navigate('NewStories', {instance:instance})}}
+          onPress={()=>{navigate('NewStories', {instance:instance})
+                        this.setState({reRender: true});}}
           />
         </View>
 

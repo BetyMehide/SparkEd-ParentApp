@@ -56,7 +56,7 @@ export default class InputScreen extends Component {
   //delete current story and navigate to NewStories screen
   _delete = () => {
     DbDelete(this.props.navigation.getParam('instance'));
-    this.props.navigation.navigate('NewStories', {instance:this.props.navigation.getParam('instance')-1});
+    this.props.navigation.navigate('Home', {instance:this.props.navigation.getParam('instance')-1});
   }
 
   //help pop-up status

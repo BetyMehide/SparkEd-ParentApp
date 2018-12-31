@@ -54,10 +54,10 @@ export default class InputScreen extends Component {
         if (responseJson){
           let curText = this.state.scenes;
           let curVoiceover = this.state.voiceover;
-          if (responseJson && responseJson.rows && responseJson.rows[0].scriptText && typeof responseJson.rows[0].scriptText == 'string'){
+          if (responseJson.rows && JSON.parse(responseJson.rows[0].scriptText) !== null){
             curText = JSON.parse(responseJson.rows[0].scriptText);
           }
-          if (responseJson && responseJson.rows && responseJson.rows[0].scriptVoiceover && typeof responseJson.rows[0].scriptVoiceover == 'string'){
+          if (responseJson.rows && JSON.parse(responseJson.rows[0].scriptVoiceover) !== null){
             curVoiceover = JSON.parse(responseJson.rows[0].scriptVoiceover);
             curVoiceover.forEach((voiceover) => {
               if(voiceover.recLength > 0){
@@ -92,7 +92,7 @@ export default class InputScreen extends Component {
   //delete current story from database
   _delete = () => {
     DbDelete(this.props.navigation.getParam('instance'));
-    this.props.navigation.navigate('NewStories', {instance:this.props.navigation.getParam('instance')-1});
+    this.props.navigation.navigate('Home', {instance:this.props.navigation.getParam('instance')-1});
   }
 
   //information pop-up handling
@@ -107,7 +107,8 @@ export default class InputScreen extends Component {
       recordingExists = true;
       recordingTime = this.state.voiceover[newScene]['recLength'];
     }
-    this.setState({finished: recordingExists, stoppedRecording:true, currentTime: recordingTime, canPlay: recordingExists, scene: newScene, audioPath: AudioUtils.DocumentDirectoryPath + '/test00' + this.props.navigation.getParam('instance') + newScene +'.aac'}, 
+    this._RecordingComponent.changeScene(recordingExists, recordingTime, newScene, this.props.navigation.getParam('instance'));
+    this.setState({scene: newScene}, 
         () => {console.log(this.state)});
   }
 
@@ -130,9 +131,8 @@ export default class InputScreen extends Component {
         subtitle = 'Input Items'
         buttonLAction={() => Alert.alert(
           'Alert', "You're about to delete this story and all your edits. Are you sure you want to continue?",
-          [{text: 'Cancel', onPress: () => _delete(), style:'cancel'},
-        {text: 'Delete', onPress: () => {this._DbQueryPost();
-                                        navigate('NewStories', {instance:instance-1})}}],
+          [{text: 'Cancel', onPress: () => undefined, style:'cancel'},
+        {text: 'Delete', onPress: () => this._delete()}],
         )}
         buttonLIcon={require('../../assets/exit.png')}
         buttonRAction={() => navigate('PublishStory', {instance:instance})}
@@ -175,7 +175,7 @@ export default class InputScreen extends Component {
               value = {scenes[this.state.scene].text}
             />
 
-            <RecordingComponent setVoiceoverState={this._setVoiceoverState(this)} scene={this.state.scene} voiceover={this.state.voiceover} instance={this.props.navigation.getParam('instance')}/>
+            <RecordingComponent ref={ref => (this._RecordingComponent = ref)} setVoiceoverState={this._setVoiceoverState(this)} scene={this.state.scene} voiceover={this.state.voiceover} instance={this.props.navigation.getParam('instance')}/>
 
         </ScrollView>
 

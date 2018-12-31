@@ -9,7 +9,7 @@ export default class PublishStoryScreen extends Component {
   //initiate the deletion of current story and navigate to new story selection screen
   _delete = () => {
     DbDelete(this.props.navigation.getParam('instance'));
-    this.props.navigation.navigate('NewStories', {instance:this.props.navigation.getParam('instance')-1});
+    this.props.navigation.navigate('Home', {instance:this.props.navigation.getParam('instance')-1});
   }
 
   //render screen

@@ -96,7 +96,7 @@ export function DbScriptPost(instance, scriptText, scriptVoiceover) {
       scriptText: JSON.stringify(scriptText),
       scriptVoiceover: JSON.stringify(scriptVoiceover),
     }),
-  }).then((response) => {console.log(response)})
+  }).then((response) => {console.log('Script post response: ' + response)})
   .catch((error) => {
     console.error(error);
   });
@@ -121,7 +121,7 @@ export function DbInputPost(instance, inputItems, inputMethods) {
       inputItems: JSON.stringify(inputItems),
       inputMethods: JSON.stringify(inputMethods),
     }),
-  }).then((response) => {console.log(response)})
+  }).then((response) => {console.log("Input post response" + response)})
   .catch((error) => {
     console.error(error);
   });

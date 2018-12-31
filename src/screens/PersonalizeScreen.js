@@ -19,7 +19,7 @@ export default class PersonalizeScreen extends Component {
   //initiate the deletion of current story and navigate back to new story selection
   _delete = () => {
     DbDelete(this.props.navigation.getParam('instance'));
-    this.props.navigation.navigate('NewStories', {instance:this.props.navigation.getParam('instance')})
+    this.props.navigation.navigate('Home', {instance:this.props.navigation.getParam('instance')})
   }
 
   //help information for each screen. 

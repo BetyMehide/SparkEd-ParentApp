@@ -63,7 +63,7 @@ export default class CharactersScreen extends Component {
   //Delete current story from database
   _delete = () => {
     DbDelete(this.props.navigation.getParam('instance'));
-    this.props.navigation.navigate('NewStories', {instance:this.props.navigation.getParam('instance')-1});
+    this.props.navigation.navigate('Home', {instance:this.props.navigation.getParam('instance')-1});
   }
 
   //change the information modal visibility
