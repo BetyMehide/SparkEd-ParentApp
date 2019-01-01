@@ -26,13 +26,15 @@ export default class CharactersScreen extends Component {
       .then((responseJson) => {
         if (responseJson){
           let curState = this.state;
-          curState['storyName'] = responseJson.rows[0].storyName;
-          if (responseJson.rows[0].characters != 'null'){
+          if (JSON.parse(responseJson.rows[0].storyName) !== null){
+            curState['storyName'] = responseJson.rows[0].storyName;
+          }
+          if (JSON.parse(responseJson.rows[0].characters) !== null){
             JSON.parse(responseJson.rows[0].characters).forEach((character) => {
               curState[`character${character.nr}`] = character.name;
             })
           }
-          if (responseJson.rows[0].characterNames != 'null'){
+          if (JSON.parse(responseJson.rows[0].characterNames) !== null){
             JSON.parse(responseJson.rows[0].characterNames).forEach((characterName) => {
               curState[`character${characterName.nr}Name`] = characterName.name;
             })
