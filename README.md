@@ -19,8 +19,5 @@ This repository contains the code for the parent side react-native application p
 <img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/InputScreen.png height="520" alt="Input item personalization screen"> <img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/ScriptScreen.png height="520" alt="Script personalization screen"> 
 <img src=https://github.com/BetyMehide/SparkEd-ParentApp/blob/master/screenshots/PublishStoryScreen.png height="520" alt="Save and publish story screen"> 
 
-
-
-
-
-Icons in the assets folder taken from flaticon.com.
+## Project buildup
+The starting point for the code in this project is the App.js file in the root folder and it defines the navigation logic of the application. The rendering code for each screen can be found from the ./src/screens folder. The code for self-made components can be found from the ./src/components folder and the API connection calls can all be found from the ./src/api folder. Icons used in the code (e.g. add new icon) have been taken from flaticon.com, the specific images can be found in the ./assets folder.
